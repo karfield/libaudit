@@ -138,7 +138,7 @@ void event_free(struct event *event)
 	}
 }
 
-inline char *copy_str(const char *str)
+static inline char *copy_str(const char *str)
 {
 	return (str) ? strdup(str) : NULL;
 }
@@ -650,7 +650,7 @@ int process_control_event(auparse_state_t *au)
 	return 0;
 }
 
-inline int is_resource(const char *res)
+static inline int is_resource(const char *res)
 {
 	if (res == NULL ||
 	    res[0] == '\0' ||
